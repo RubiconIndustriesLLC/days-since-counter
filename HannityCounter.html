@@ -18,41 +18,39 @@
     <h1 id="hannity-heading">Days Since Hannity Promised to be Waterboarded for a Soldiers' Families Charity</h1>
 
     <!-- A container to position the video and the counter overlay -->
-    <div id="video-container">
       <!-- The counter overlay: we place it absolutely on top of the video -->
       <div id="video-counter-overlay">
         <div class="time-block">
           <span class="time-value" id="days"></span>
-          <span class="time-label" id="days-label">D</span>
+          <span class="time-label" id="days-label">DAYS</span>
         </div>
         <div class="time-block">
           <span class="time-value" id="hours"></span>
-          <span class="time-label" id="hours-label">Hrs</span>
+          <span class="time-label" id="hours-label">HRS</span>
         </div>
         <div class="time-block">
           <span class="time-value" id="minutes"></span>
-          <span class="time-label" id="minutes-label">Mins</span>
+          <span class="time-label" id="minutes-label">MINS</span>
         </div>
         <div class="time-block">
           <span class="time-value" id="seconds"></span>
-          <span class="time-label" id="seconds-label">Secs</span>
+          <span class="time-label" id="seconds-label">SECS</span>
         </div>
-      </div>
 
-      <!-- The YouTube video embed:
-           Replace the src with the link of your choice. -->
+
+        <!-- The video near the bottom -->
+    <div id="video-container">
       <iframe 
+        src="https://www.youtube.com/embed/p-YSlARDNxs"
         width="560" 
         height="315" 
-        src="https://www.youtube.com/embed/p-YSlARDNxs"
-        title="YouTube video player"
-        frameborder="0" 
+        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowfullscreen>
       </iframe>
     </div>
   </div>
-
+    
   <script>
     // Set your Hannity event date/time (Year, MonthIndex, Day, Hour, Minute, Second)
     // Example: new Date(2025, 2, 1, 12, 0, 0) => March 1, 2025 at 12:00:00
