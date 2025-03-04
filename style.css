@@ -32,3 +32,28 @@ h1 {
   <span id="seconds-label">Seconds</span>
 </p>
 
+/* Odometer-like digits */
+#counter span {
+  display: inline-block;
+  min-width: 60px;  /* wide enough to look like a box */
+  margin: 5px;
+  padding: 10px;
+  background-color: #000;  /* black background */
+  color: #0f0;             /* green-ish text for a digital look */
+  font-family: "Courier New", monospace;
+  font-size: 1.5em;
+  border-radius: 5px;
+}
+
+/* Labels (Days, Hours, Minutes, Seconds) 
+   We might want them to not have the black box. */
+#days-label,
+#hours-label,
+#minutes-label,
+#seconds-label {
+  background-color: transparent;
+  color: black;
+  margin-right: 10px;   /* little space between label and next digit */
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+}
