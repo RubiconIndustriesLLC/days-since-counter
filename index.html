@@ -2,41 +2,48 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Days Since Event</title>
+  <title>Days Since Musk Ran Away From The Jon Stewart Interview</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Main container to center everything vertically and horizontally -->
+
+  <!-- Navigation links at the top center -->
+  <div id="nav-links">
+    <!-- 
+      Replace "videoCounter.html" and "thirdCounter.html" with 
+      whatever filenames you plan to use for your upcoming pages.
+    -->
+    <a href="HannityCounter.html">Hannity Waterboarding Counter</a>
+    <a href="KissingerCounter.html">Kissinger Death Counter</a>
+  </div>
+
+  <!-- Existing container for heading + counter -->
   <div id="container">
     <h1>Days Since Musk Ran Away From The Jon Stewart Interview</h1>
 
-    <!-- Counter wrapper: each time-block is a vertical stack of number + label -->
     <div id="counter">
       <div class="time-block">
         <span class="time-value" id="days"></span>
-        <span class="time-label" id="days-label">DAYS</span> <!-- Abbrev for Days -->
+        <span class="time-label" id="days-label">D</span>
       </div>
-
       <div class="time-block">
         <span class="time-value" id="hours"></span>
-        <span class="time-label" id="hours-label">HRS</span> <!-- Abbrev for Hours -->
+        <span class="time-label" id="hours-label">Hrs</span>
       </div>
-
       <div class="time-block">
         <span class="time-value" id="minutes"></span>
-        <span class="time-label" id="minutes-label">MINS</span> <!-- Abbrev for Minutes -->
+        <span class="time-label" id="minutes-label">Mins</span>
       </div>
-
       <div class="time-block">
         <span class="time-value" id="seconds"></span>
-        <span class="time-label" id="seconds-label">SECS</span> <!-- Abbrev for Seconds -->
+        <span class="time-label" id="seconds-label">Secs</span>
       </div>
     </div>
   </div>
 
+  <!-- Your existing JS code for the countdown -->
   <script>
-    // Set the date/time of your event here
-    const eventDate = new Date(2025, 1, 25, 18, 31, 0); // Feb 25, 2025, 6:31 PM
+    const eventDate = new Date(2025, 1, 25, 18, 31, 0);
 
     function updateCounter() {
       const now = new Date();
@@ -52,16 +59,15 @@
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
 
-      // Update each time-value span
       document.getElementById("days").textContent = days;
       document.getElementById("hours").textContent = hours;
       document.getElementById("minutes").textContent = minutes;
       document.getElementById("seconds").textContent = seconds;
     }
 
-    // Update counter immediately, then every second
     updateCounter();
     setInterval(updateCounter, 1000);
   </script>
+
 </body>
 </html>
