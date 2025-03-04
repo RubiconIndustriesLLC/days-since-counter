@@ -1,0 +1,81 @@
+/* 1) Page-wide background image (just like your first page) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* If you want a new background image for Hannity page, upload it as "HannityBackground.jpg" 
+     and reference it here. Otherwise, keep the existing background or rename as needed. */
+  background: url("Hannity.jpg") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center; 
+}
+
+/* 2) The container for heading + video */
+#video-page-container {
+  /* Use absolute centering if you want it in the middle of the page
+     or just let normal flow apply. We'll do normal flow for now. */
+  margin-top: 50px;
+}
+
+/* 3) The red heading above the video */
+#hannity-heading {
+  color: red;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* 4) The video container: position relative so we can place the counter overlay on top */
+#video-container {
+  position: relative;  /* needed to hold the absolute overlay */
+  display: inline-block; /* keeps the video and overlay sized around the iframe's width/height */
+}
+
+/* 5) The counter overlay, absolutely positioned inside #video-container */
+#video-counter-overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  /* 
+    We want the time-blocks near the top of the video, 
+    or you can do top: 50% if you want them in the middle, etc.
+  */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px; /* space from the top of the video */
+}
+
+/* 6) Time-block styling reused from the first page 
+   (the "car odometer" style). If you already have these 
+   rules, keep them. Just ensure they're not overwritten. */
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-value {
+  display: inline-block;
+  min-width: 60px;
+  padding: 10px;
+  background-color: #000; /* black background for the digits */
+  color: #0f0;            /* green-ish text */
+  font-family: "Courier New", monospace;
+  font-size: 1.5em;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.time-label {
+  width: 60px;
+  background-color: transparent;
+  color: red;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  text-align: center;
+}
+
+/* 7) (Optional) If you want your counter overlay more 
+   see-through, you can add background: rgba(...) to #video-counter-overlay or .time-block */
