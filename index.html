@@ -31,12 +31,10 @@
       const seconds = Math.floor((diff / 1000) % 60);
 
       // Format the display
-      const displayString = days + " Days " +
-                            hours + " Hours " +
-                            minutes + " Minutes " +
-                            seconds + " Seconds ";
-
-      document.getElementById("counter").innerHTML = displayString;
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
     }
 
     // Update the counter once immediately
