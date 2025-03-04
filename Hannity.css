@@ -1,91 +1,111 @@
-/* 1) Page-wide background image (just like your first page) */
-body {
+/* 
+  1) Ensure the HTML and BODY both occupy 100% of the viewport. 
+     This is crucial so that #video-page-container's 100% height actually fills the screen.
+*/
+html, body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  /* If you want a new background image for Hannity page, upload it as "HannityBackground.jpg" 
-     and reference it here. Otherwise, keep the existing background or rename as needed. */
+  height: 100%;
+  font-family: Arial, sans-serif; /* or your preferred font */
+}
+
+/* 
+  2) Page-wide background image.
+     - Using 'background-size: contain' to keep full image visible (letterboxes may appear).
+     - 'background-color: #000' as a fallback/letterbox color.
+     - 'text-align: center;' to center any inline text.
+*/
+body {
   background: url("Hannity.jpg") no-repeat center center fixed;
   background-size: contain;
   background-color: #000;
-  text-align: center; 
+  text-align: center;
 }
 
-/* The parent container that holds the links */
+/* 3) Navigation links across the top, side by side (unchanged) */
 #nav-links {
-  display: flex;               /* Layout children in a row */
-  justify-content: center;     /* Center them horizontally */
-  align-items: center;         /* Vertically align in the container */
-  gap: 20px;                   /* Horizontal spacing between each link */
-  margin-top: 20px;            /* Spacing from the top if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-/* Each link styled as a box/button */
+/* Nav link boxes (unchanged) */
 #nav-links a {
-  display: block;              /* Keep the boxy style */
-  width: 220px;                /* Fixed width for consistency (optional) */
-  padding: 12px;               /* Inner spacing for the box */
-  text-align: center;          /* Center the link text */
-  font-family: Arial, sans-serif;
+  display: block;
+  width: 220px;
+  padding: 12px;
+  text-align: center;
   font-size: 1.2em;
   font-weight: bold;
-  color: red;                  /* Text color */
-  text-decoration: none;       /* Remove underline */
+  color: red;
+  text-decoration: none;
 
-  /* Standout background & border */
   background-color: black;
   border: 3px solid red;
   border-radius: 5px;
-  
-  /* Remove vertical margin since they won't be stacked */
-  margin: 0;
+  margin: 0; /* remove vertical margin since they're side by side */
 }
 
-/* Optional hover effect */
 #nav-links a:hover {
-  background-color: red; 
+  background-color: red;
   color: black;
 }
 
-/* This container spans the full viewport */
+/* 
+  4) Main container that takes up the full viewport.
+     position: relative so child elements can be absolutely positioned within it.
+*/
 #video-page-container {
-  position: relative; /* so child absolute elements can position inside it */
+  position: relative;
   width: 100%;
-  height: 100%;       /* fill the full browser height */
-  /* optional: background or other styling */
+  height: 100%;  /* fills entire browser window (because body/html are also 100%) */
 }
 
-/* Center the heading & counter in the middle */
+/* 
+  5) Center the heading & counter in the *vertical* middle using absolute positioning.
+     We place them at top: 40% and 50% respectively as an easy approximation;
+     adjust these values to position them exactly as you like.
+*/
 #hannity-heading,
 #video-counter-overlay {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); 
 }
 
-/* Put the heading above the counter, 
-   each offset slightly for spacing */
+/* Heading a bit higher up (around 40% down) */
 #hannity-heading {
-  top: 40%; /* about 40% down from the top, adjust to taste */
+  top: 40%; 
+  color: red;  /* if desired */
+  font-size: 2em; /* for visibility */
+  margin: 0; 
 }
 
-/* Position the video near the bottom */
+/* Counter slightly below heading (around 50% down) */
+#video-counter-overlay {
+  top: 50%; 
+  /* 
+    If you want the counter exactly centered vertically, you can also do:
+    transform: translate(-50%, -50%);
+    but then it may overlap the heading—so play with the top % or remove the second part of transform.
+  */
+}
+
+/* 6) Place the video near the bottom with ~50px space above the edge */
 #video-container {
   position: absolute;
-  bottom: 50px;  /* 50px from the bottom edge */
+  bottom: 50px;
   left: 50%;
-  transform: translateX(-50%); /* horizontally center */
+  transform: translateX(-50%);
+  /* 
+    If your iframe is large, it may extend upward significantly. 
+    Adjust bottom or use a smaller iframe height as needed.
+  */
 }
 
-/* Put the counter just below the heading */
-#video-counter-overlay {
-  top: 50%; /* about 50% down from the top, adjust to taste */
-  /* You can add transform: translate(-50%, -50%) if you want it exactly at center 
-     but then it might overlap the heading. Play around with these percentages. */
-}
-
-/* Example styling for your time-block, heading, etc. 
-   (similar to your existing code) */
+/* 7) Odometer-style blocks (similar to your existing code) */
 .time-block {
   display: inline-flex;
   flex-direction: column;
@@ -105,12 +125,6 @@ body {
 
 .time-label {
   width: 60px;
-  background-color: transparent;
   color: red;
-  font-family: Arial, sans-serif;
-  font-size: 1em;
   text-align: center;
 }
-
-/* 7) (Optional) If you want your counter overlay more 
-   see-through, you can add background: rgba(...) to #video-counter-overlay or .time-block */
