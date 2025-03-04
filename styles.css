@@ -9,7 +9,7 @@ body {
   /* Background image */
   background: url("MuskNaziSalute3.jpg") no-repeat center center fixed;
   background-size: contain;
-
+  background-color: #000;
 }
 
 /* Navigation links container */
