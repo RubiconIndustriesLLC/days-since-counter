@@ -72,21 +72,22 @@ body {
 */
 #hannity-heading {
   position: absolute;
-  top: 200px;          /* ~100px from top. Adjust as desired. */
+  top: 100px; /* Move the heading further up */
   left: 50%;
   transform: translateX(-50%);
   color: red;
   font-size: 2.5em;
   margin: 0;
+  line-height: 1.2; /* Slightly tighten spacing between lines, optional */
 }
 
 #video-counter-overlay {
   position: absolute;
-  top: 200px;          /* slightly below heading, adjust as desired */
+  top: 220px; /* Move the counter lower so it doesn’t overlap */
   left: 50%;
   transform: translateX(-50%);
-  /* Remove translateY(-50%) so it doesn't end up in the center. */
 }
+
 
 /* Each time-block (odometer style) */
 .time-block {
