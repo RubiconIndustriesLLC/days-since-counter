@@ -7,6 +7,7 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif; /* or your preferred font */
+  overflow: hidden; /* This disables scrolling if content overflows */
 }
 
 /* 
@@ -86,6 +87,8 @@ body {
 /* Counter slightly below heading (around 50% down) */
 #video-counter-overlay {
   top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
   /* 
     If you want the counter exactly centered vertically, you can also do:
     transform: translate(-50%, -50%);
@@ -96,7 +99,7 @@ body {
 /* 6) Place the video near the bottom with ~50px space above the edge */
 #video-container {
   position: absolute;
-  bottom: 250px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   /* 
