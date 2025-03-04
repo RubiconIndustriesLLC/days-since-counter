@@ -83,7 +83,7 @@ body {
 
 #video-counter-overlay {
   position: absolute;
-  top: 220px; /* Move the counter lower so it doesn’t overlap */
+  top: 350px; /* Move the counter lower so it doesn’t overlap */
   left: 50%;
   transform: translateX(-50%);
 }
