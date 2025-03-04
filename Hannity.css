@@ -6,8 +6,45 @@ body {
   /* If you want a new background image for Hannity page, upload it as "HannityBackground.jpg" 
      and reference it here. Otherwise, keep the existing background or rename as needed. */
   background: url("Hannity.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background-size: contain;
+  background-color: #000;
   text-align: center; 
+}
+
+/* The parent container that holds the links */
+#nav-links {
+  display: flex;               /* Layout children in a row */
+  justify-content: center;     /* Center them horizontally */
+  align-items: center;         /* Vertically align in the container */
+  gap: 20px;                   /* Horizontal spacing between each link */
+  margin-top: 20px;            /* Spacing from the top if needed */
+}
+
+/* Each link styled as a box/button */
+#nav-links a {
+  display: block;              /* Keep the boxy style */
+  width: 220px;                /* Fixed width for consistency (optional) */
+  padding: 12px;               /* Inner spacing for the box */
+  text-align: center;          /* Center the link text */
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: red;                  /* Text color */
+  text-decoration: none;       /* Remove underline */
+
+  /* Standout background & border */
+  background-color: black;
+  border: 3px solid red;
+  border-radius: 5px;
+  
+  /* Remove vertical margin since they won't be stacked */
+  margin: 0;
+}
+
+/* Optional hover effect */
+#nav-links a:hover {
+  background-color: red; 
+  color: black;
 }
 
 /* 2) The container for heading + video */
