@@ -6,39 +6,39 @@
   <link rel="stylesheet" href="Hannity.css">
 </head>
 <body>
-  <!-- Top nav links (adjust file names if different) -->
   <div id="nav-links">
     <a href="index.html">Musk Ran Away Counter</a>
     <a href="KissingerCounter.html">Kissinger Death Counter</a>
   </div>
 
-  <!-- Main container for the heading, video, and counter overlay -->
   <div id="video-page-container">
-    <!-- Red heading/string at the top of the video -->
-    <h1 id="hannity-heading">Days Since Hannity Promised to be Waterboarded for a Soldiers' Families Charity</h1>
+    <h1 id="hannity-heading">
+      Days Since Hannity Promised to be Waterboarded for Soldiers' Families Charity
+    </h1>
 
-    <!-- A container to position the video and the counter overlay -->
-      <!-- The counter overlay: we place it absolutely on top of the video -->
-      <div id="video-counter-overlay">
-        <div class="time-block">
-          <span class="time-value" id="days"></span>
-          <span class="time-label" id="days-label">DAYS</span>
-        </div>
-        <div class="time-block">
-          <span class="time-value" id="hours"></span>
-          <span class="time-label" id="hours-label">HRS</span>
-        </div>
-        <div class="time-block">
-          <span class="time-value" id="minutes"></span>
-          <span class="time-label" id="minutes-label">MINS</span>
-        </div>
-        <div class="time-block">
-          <span class="time-value" id="seconds"></span>
-          <span class="time-label" id="seconds-label">SECS</span>
-        </div>
+    <!-- The counter overlay -->
+    <div id="video-counter-overlay">
+      <div class="time-block">
+        <span class="time-value" id="days"></span>
+        <span class="time-label" id="days-label">DAYS</span>
+      </div>
+      <div class="time-block">
+        <span class="time-value" id="hours"></span>
+        <span class="time-label" id="hours-label">HRS</span>
+      </div>
+      <div class="time-block">
+        <span class="time-value" id="minutes"></span>
+        <span class="time-label" id="minutes-label">MINS</span>
+      </div>
+      <div class="time-block">
+        <span class="time-value" id="seconds"></span>
+        <span class="time-label" id="seconds-label">SECS</span>
+      </div>
+    </div>
+    <!-- Close #video-counter-overlay here ^^^ -->
 
-
-        <!-- The video near the bottom -->
+    <!-- Now the video container is its own sibling, 
+         so bottom: 100px means the bottom of #video-page-container. -->
     <div id="video-container">
       <iframe 
         src="https://www.youtube.com/embed/p-YSlARDNxs"
@@ -50,6 +50,11 @@
       </iframe>
     </div>
   </div>
+
+  <script>
+    // Your existing JavaScript counter code...
+  </script>
+</body>
     
   <script>
     // Set your Hannity event date/time (Year, MonthIndex, Day, Hour, Minute, Second)
