@@ -8,7 +8,7 @@ body {
 
   /* Background image */
   background: url("MuskNaziSalute.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background-size: contain;
 }
 
 /* Container to center heading + counter in the middle of the screen */
