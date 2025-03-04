@@ -99,7 +99,7 @@ body {
 /* 6) Place the video near the bottom with ~50px space above the edge */
 #video-container {
   position: absolute;
-  bottom: 50px;
+  bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
   /* 
