@@ -4,6 +4,8 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   text-align: center; /* Center all text in the body */
+  background: url("MuskNaziSalute.jpg") no-repeat center center fixed;
+  background-size: cover; /* so image scales to fill screen */
 }
 
 /* Basic style for your main heading */
