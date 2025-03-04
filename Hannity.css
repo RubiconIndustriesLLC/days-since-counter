@@ -74,7 +74,7 @@ body {
 */
 #hannity-heading {
   position: absolute;
-  top: 100px;          /* ~100px from top. Adjust as desired. */
+  top: 200px;          /* ~100px from top. Adjust as desired. */
   left: 50%;
   transform: translateX(-50%);
   color: red;
