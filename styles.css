@@ -14,23 +14,37 @@ body {
 
 /* Navigation links container */
 #nav-links {
-  text-align: center;
-  margin-top: 10px;
-  /* If you want them closer to the top, you might reduce margin-top or remove it. */
+  display: flex;           /* We use flex to manage layout */
+  flex-direction: column;  /* Stack items vertically */
+  align-items: center;     /* Center them horizontally */
+  margin-top: 20px;        /* Move it slightly down from the very top */
 }
 
-/* Style each link in the nav */
+/* Style each link so it looks like a standalone box/button */
 #nav-links a {
-  color: red;              /* Match your red heading, or choose another color */
-  text-decoration: none;   /* Remove underline */
-  font-weight: bold;
+  display: block;             /* So it can take full width/height styling */
+  width: 220px;               /* Fixed width for consistency (adjust as desired) */
+  margin: 10px 0;             /* Space between each link vertically */
+  padding: 12px;              /* Inner spacing for the box */
+  text-align: center;         /* Center the link text */
+  font-family: Arial, sans-serif;
   font-size: 1.2em;
-  margin: 0 15px;          /* Space between links */
+  font-weight: bold;
+  color: red;                 /* Text color */
+  text-decoration: none;      /* Remove underline */
+
+  /* Make it pop with a background and border */
+  background-color: black;    /* Box background */
+  border: 3px solid red;      /* Red border stands out */
+  border-radius: 5px;         /* Slightly rounded corners */
 }
 
+/* Optional hover effect: highlight link on mouse-over */
 #nav-links a:hover {
-  text-decoration: underline; /* Optional hover effect */
+  background-color: red; 
+  color: black;              /* Switch text to black for contrast */
 }
+
 
 /* Container to center heading + counter in the middle of the screen */
 #container {
