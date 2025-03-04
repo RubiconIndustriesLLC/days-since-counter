@@ -83,7 +83,7 @@ body {
 
 #video-counter-overlay {
   position: absolute;
-  top: 350px; /* Move the counter lower so it doesn’t overlap */
+  top: 300px; /* Move the counter lower so it doesn’t overlap */
   left: 50%;
   transform: translateX(-50%);
 }
@@ -121,7 +121,7 @@ body {
 */
 #video-container {
   position: absolute;
-  bottom: 100px;           /* Force it to appear below the counter. 
+  bottom: 200px;           /* Force it to appear below the counter. 
                            If you prefer from the bottom, use bottom: 50px; etc. 
                            Or do both. */
   left: 50%;
