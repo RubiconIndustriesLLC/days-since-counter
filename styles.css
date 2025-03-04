@@ -12,39 +12,41 @@ body {
   background-color: #000;
 }
 
-/* Navigation links container */
+/* The parent container that holds the links */
 #nav-links {
-  display: flex;           /* We use flex to manage layout */
-  flex-direction: column;  /* Stack items vertically */
-  align-items: center;     /* Center them horizontally */
-  margin-top: 20px;        /* Move it slightly down from the very top */
+  display: flex;               /* Layout children in a row */
+  justify-content: center;     /* Center them horizontally */
+  align-items: center;         /* Vertically align in the container */
+  gap: 20px;                   /* Horizontal spacing between each link */
+  margin-top: 20px;            /* Spacing from the top if needed */
 }
 
-/* Style each link so it looks like a standalone box/button */
+/* Each link styled as a box/button */
 #nav-links a {
-  display: block;             /* So it can take full width/height styling */
-  width: 220px;               /* Fixed width for consistency (adjust as desired) */
-  margin: 10px 0;             /* Space between each link vertically */
-  padding: 12px;              /* Inner spacing for the box */
-  text-align: center;         /* Center the link text */
+  display: block;              /* Keep the boxy style */
+  width: 220px;                /* Fixed width for consistency (optional) */
+  padding: 12px;               /* Inner spacing for the box */
+  text-align: center;          /* Center the link text */
   font-family: Arial, sans-serif;
   font-size: 1.2em;
   font-weight: bold;
-  color: red;                 /* Text color */
-  text-decoration: none;      /* Remove underline */
+  color: red;                  /* Text color */
+  text-decoration: none;       /* Remove underline */
 
-  /* Make it pop with a background and border */
-  background-color: black;    /* Box background */
-  border: 3px solid red;      /* Red border stands out */
-  border-radius: 5px;         /* Slightly rounded corners */
+  /* Standout background & border */
+  background-color: black;
+  border: 3px solid red;
+  border-radius: 5px;
+  
+  /* Remove vertical margin since they won't be stacked */
+  margin: 0;
 }
 
-/* Optional hover effect: highlight link on mouse-over */
+/* Optional hover effect */
 #nav-links a:hover {
   background-color: red; 
-  color: black;              /* Switch text to black for contrast */
+  color: black;
 }
-
 
 /* Container to center heading + counter in the middle of the screen */
 #container {
