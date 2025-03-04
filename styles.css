@@ -1,47 +1,73 @@
-/* Basic reset and text centering */
+/* Body: full-screen background image */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  text-align: center; /* Center all text in the body */
+  /* Center text just in case, but we'll do absolute center below */
+  text-align: center;
+
+  /* Background image */
   background: url("MuskNaziSalute.jpg") no-repeat center center fixed;
-  background-size: cover; /* so image scales to fill screen */
+  background-size: cover;
 }
 
-/* Basic style for your main heading */
+/* Container to center heading + counter in the middle of the screen */
+#container {
+  /* Fill entire viewport */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* shift it so that (top, left) is center */
+
+  /* Extra optional styling */
+  width: 100%;
+  max-width: 600px; /* keep it narrower if you like */
+}
+
+/* Heading style: red text */
 h1 {
-  margin-top: 50px; /* spacing from the top */
+  margin: 0 0 30px; /* spacing below heading */
   font-size: 2.5em;
+  color: red;
 }
 
-/* The counter text style (initial placeholder) */
+/* #counter: use flexbox to place each time-block horizontally side by side */
 #counter {
-  font-size: 1.3em;
-  margin-top: 20px;
+  display: flex; 
+  justify-content: center; /* center them horizontally */
+  gap: 20px; /* space between blocks */
 }
 
-/* Odometer-like digits */
-#counter span {
+/* Each time-block is a vertical stack of number above label */
+.time-block {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+/* The number (days, hours, etc.) */
+.time-value {
   display: inline-block;
-  min-width: 60px;  /* wide enough to look like a box */
-  margin: 5px;
+  min-width: 60px;
   padding: 10px;
   background-color: #000;  /* black background */
-  color: #0f0;             /* green-ish text for a digital look */
+  color: #0f0;             /* green-ish digital text */
   font-family: "Courier New", monospace;
   font-size: 1.5em;
   border-radius: 5px;
+  margin-bottom: 5px; /* small space before the label */
+  text-align: center; /* center the number within the box */
 }
 
-/* Labels (Days, Hours, Minutes, Seconds) 
-   We might want them to not have the black box. */
-#days-label,
-#hours-label,
-#minutes-label,
-#seconds-label {
+/* The abbreviation label (D, Hrs, Mins, Secs) */
+.time-label {
+  display: inline-block;
+  /* Force a consistent width for all abbreviations 
+     so the spacing between blocks remains even. */
+  width: 60px;   
   background-color: transparent;
-  color: black;
-  margin-right: 10px;   /* little space between label and next digit */
+  color: red; /* also red to match your request */
   font-family: Arial, sans-serif;
   font-size: 1em;
+  text-align: center; /* center text within the label box */
 }
