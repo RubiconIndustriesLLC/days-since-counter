@@ -122,7 +122,7 @@ body {
 */
 #video-container {
   position: absolute;
-  bottom: 50px;           /* Force it to appear below the counter. 
+  bottom: 100px;           /* Force it to appear below the counter. 
                            If you prefer from the bottom, use bottom: 50px; etc. 
                            Or do both. */
   left: 50%;
