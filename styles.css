@@ -12,6 +12,26 @@ body {
   background-color: #000;
 }
 
+/* Navigation links container */
+#nav-links {
+  text-align: center;
+  margin-top: 10px;
+  /* If you want them closer to the top, you might reduce margin-top or remove it. */
+}
+
+/* Style each link in the nav */
+#nav-links a {
+  color: red;              /* Match your red heading, or choose another color */
+  text-decoration: none;   /* Remove underline */
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0 15px;          /* Space between links */
+}
+
+#nav-links a:hover {
+  text-decoration: underline; /* Optional hover effect */
+}
+
 /* Container to center heading + counter in the middle of the screen */
 #container {
   /* Fill entire viewport */
