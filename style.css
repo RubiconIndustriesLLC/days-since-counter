@@ -20,20 +20,6 @@ h1 {
   margin-top: 20px;
 }
 
-<p id="counter">
-  <span id="days"></span>
-  <span id="days-label">Days</span>
-  
-  <span id="hours"></span>
-  <span id="hours-label">Hours</span>
-  
-  <span id="minutes"></span>
-  <span id="minutes-label">Minutes</span>
-  
-  <span id="seconds"></span>
-  <span id="seconds-label">Seconds</span>
-</p>
-
 /* Odometer-like digits */
 #counter span {
   display: inline-block;
